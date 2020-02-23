@@ -14,7 +14,14 @@ const Login = props => {
 
         props.form.validateFields((err, values) => {
             if (!err) {
-                // context.set(values.username, values.password, values.remember)
+                // authAPI.loginWithEmail({ email: values.username, password: values.password }).then(res => {
+                //     axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`
+                //     if (values.remember) {
+                //         window.localStorage.setItem('@user/token', res.data.token)
+                //     }
+                //     context.set(p => ({ ...p, isAuth: true, user: res.data.user }))
+                // })
+                context.set(p => ({ ...p, isAuth: true, user: {} }))
                 console.log('Received values of form: ', values);
             }
         });

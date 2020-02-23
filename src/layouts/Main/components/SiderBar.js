@@ -6,8 +6,8 @@ import config from '../../../constants/config';
 const { Sider } = Layout;
 
 const menus = [
-    { key: '1', name: 'Dashboard', to: '/' },
-    { key: '2', name: 'Users', to: '/users' }
+    { key: '1', name: 'Dashboard', to: '/', icon: "pie-chart" },
+    { key: '2', name: 'Users', to: '/users', icon: 'user' },
 ]
 
 const SiderBar = props => {
@@ -30,7 +30,6 @@ const SiderBar = props => {
                 </Link>
             </div>
             <Menu
-                // defaultSelectedKeys={['2']}
                 selectedKeys={selected ? selected.key : ['1']}
                 defaultOpenKeys={['sub1']}
                 mode="inline"
@@ -38,7 +37,7 @@ const SiderBar = props => {
             >
                 {menus.map(menu => (
                     <Menu.Item key={menu.key}>
-                        <Icon type="pie-chart" />
+                        <Icon type={menu.icon} />
                         <span>{menu.name}</span>
                         <Link to={menu.to} />
                     </Menu.Item>
@@ -79,38 +78,6 @@ const SiderBar = props => {
                     </Menu.SubMenu>
                 </Menu.SubMenu> */}
             </Menu>
-            {/* <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                <Menu.Item key="1">
-                    <Link to="/">
-                        <Icon type="dashboard" />
-                        <span>Dashboard</span>
-                    </Link>
-                </Menu.Item>
-                <Menu.Item key="2">
-                    <Link to="/list">
-                        <Icon type="unordered-list" />
-                        <span>List</span>
-                    </Link>
-                </Menu.Item>
-                <Menu.Item key="3">
-                    <Icon type="upload" />
-                    <span>nav 3</span>
-                </Menu.Item>
-                <Menu.Menu.SubMenu
-                    key="sub1"
-                    title={
-                        <Menu.Item>
-                            <Icon type="user" />
-                            <span>Sub 1</span>
-                        </Menu.Item>
-                    }
-                >
-                    <Menu.Item key="sub1-1">option1</Menu.Item>
-                    <Menu.Item key="sub1-2">option2</Menu.Item>
-                    <Menu.Item key="sub1-3">option3</Menu.Item>
-                    <Menu.Item key="sub1-4">option4</Menu.Item>
-                </Menu.Menu.SubMenu>
-            </Menu> */}
         </Sider>
     )
 }

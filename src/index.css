@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-form {
+  max-width: 360px;
+  margin: auto;
+  margin-top: 50px;
+}
+.login-logo {
+  height: 44px;
+  margin-right: 16px;
+  vertical-align: top;
+}
+.login-title {
+  position: relative;
+  top: 2px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 33px;
+  font-family: Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+
+/* Sidebar */
+.sider-bar-logo {
+  position: relative;
+  height: 64px;
+  padding-left: 24px;
+  overflow: hidden;
+  line-height: 64px;
+  background: #002140;
+  transition: all .3s;
+}
+.sider-bar-logo img {
+  display: inline-block;
+  height: 32px;
+  vertical-align: middle;
+}
+.sider-bar-logo h1 {
+  display: inline-block;
+  margin: 0 0 0 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+  vertical-align: middle;
+}
+/* Sidebar */
+
+/* Header */
+.toggle-icon {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.toggle-icon:hover {
+  color: #1890ff;
+}
+.header-item {
+  display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.header-right {
+  float: right;
+  height: 100%;
+  margin-left: auto;
+  overflow: hidden;
+}
+/* Header */
